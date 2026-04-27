@@ -524,6 +524,58 @@
     text-transform: uppercase;
     color: var(--muted);
   }
+
+  /* SECTORS STRIP */
+  #sectors {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .sectors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .sector-card {
+    background: var(--bg2);
+    padding: 1.5rem 2rem;
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background 0.2s;
+  }
+
+  .sector-card:hover { background: var(--bg3); }
+
+  .sector-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .sector-name {
+    font-family: var(--display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-align: center;
+  }
+
+  .sector-detail {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-align: center;
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -585,8 +637,28 @@
 
         <!-- Linux -->
         <div class="stack-item">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.2-.63.4-.145.197-.032.ace.134.666.195.287.338.724.6.919.107.076.315.078.42.166.22.174.086.516.296.6.636.144.929-.16 1.406-.103.123.015.256.024.402.032.983.052 1.527.25 2.147.56.33.167.757.426 1.36.426.367 0 .756-.106 1.162-.377.667-.44.93-.945.93-1.527 0-.317-.1-.65-.315-.985-.174-.267-.428-.54-.77-.745-.35-.208-.778-.36-1.306-.36-.376 0-.796.089-1.268.276-.197.076-.394.17-.594.278-.138.074-.29.156-.456.231-.13.057-.247.1-.347.124a.688.688 0 01-.144.02c-.138 0-.26-.04-.367-.12-.19-.14-.29-.38-.317-.68-.028-.3.02-.64.125-.968.21-.66.63-1.26 1.047-1.637.127-.115.253-.21.372-.285.09-.058.171-.1.24-.128.07-.03.124-.044.16-.044.037 0 .057.012.057.035 0 .068-.078.2-.14.37-.06.17-.1.377-.06.6.03.16.1.33.23.48.133.148.32.27.56.34.24.067.526.077.845.007.32-.07.67-.22 1.027-.45.184-.12.365-.26.54-.42.09-.082.178-.168.263-.258.086-.09.17-.183.25-.28.08-.097.154-.197.224-.3.07-.103.135-.208.195-.316.06-.107.113-.216.162-.326.048-.11.09-.22.126-.33.036-.11.065-.22.087-.328.022-.108.037-.214.044-.317.007-.103.007-.203 0-.3-.007-.097-.02-.19-.04-.278-.02-.09-.047-.173-.08-.25a1.45 1.45 0 00-.12-.213c-.047-.065-.1-.123-.158-.173-.057-.05-.12-.092-.187-.125a.87.87 0 00-.213-.068 1.2 1.2 0 00-.243-.017c-.086.004-.176.018-.268.042-.19.048-.395.138-.61.267-.43.257-.9.68-1.32 1.23-.42.55-.79 1.22-1.02 1.93-.23.71-.32 1.46-.22 2.14.097.672.39 1.26.87 1.68.49.42 1.16.66 1.98.66.42 0 .86-.07 1.32-.22.46-.15.93-.38 1.4-.69.47-.31.94-.7 1.39-1.16.45-.46.88-.99 1.27-1.58.39-.59.74-1.23 1.02-1.91.28-.68.49-1.39.6-2.1.11-.71.12-1.42.02-2.1-.1-.68-.31-1.33-.63-1.93-.32-.6-.76-1.14-1.31-1.58-.55-.44-1.21-.78-1.97-.99-.76-.21-1.63-.3-2.59-.24z" fill="#4ade80"/>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 1.5c5.799 0 10.5 4.701 10.5 10.5S17.799 22.5 12 22.5 1.5 17.799 1.5 12 6.201 1.5 12 1.5z" fill="none"/>
+            <!-- Tux body -->
+            <ellipse cx="12" cy="14" rx="5" ry="6.5" fill="#4ade80"/>
+            <!-- White belly -->
+            <ellipse cx="12" cy="14.5" rx="3" ry="4.5" fill="#0d0f0e"/>
+            <ellipse cx="12" cy="15" rx="2.2" ry="3.8" fill="#e8ede9"/>
+            <!-- Head -->
+            <ellipse cx="12" cy="6.5" rx="4" ry="4" fill="#4ade80"/>
+            <!-- Eyes -->
+            <circle cx="10.4" cy="5.8" r="0.7" fill="#0d0f0e"/>
+            <circle cx="13.6" cy="5.8" r="0.7" fill="#0d0f0e"/>
+            <circle cx="10.6" cy="5.6" r="0.25" fill="#e8ede9"/>
+            <circle cx="13.8" cy="5.6" r="0.25" fill="#e8ede9"/>
+            <!-- Beak -->
+            <ellipse cx="12" cy="7.8" rx="1.2" ry="0.7" fill="#7a887c"/>
+            <!-- Feet -->
+            <ellipse cx="9.5" cy="21" rx="1.8" ry="0.8" fill="#7a887c"/>
+            <ellipse cx="14.5" cy="21" rx="1.8" ry="0.8" fill="#7a887c"/>
+            <!-- Wings -->
+            <ellipse cx="7.2" cy="13.5" rx="1.2" ry="3.5" fill="#4ade80" transform="rotate(-10 7.2 13.5)"/>
+            <ellipse cx="16.8" cy="13.5" rx="1.2" ry="3.5" fill="#4ade80" transform="rotate(10 16.8 13.5)"/>
           </svg>
           <span class="stack-name">Linux</span>
         </div>
@@ -641,6 +713,46 @@
             <path d="M.614 0h22.772C23.725 0 24 .262 24 .585v22.83c0 .323-.275.585-.614.585H.614C.275 24 0 23.738 0 23.415V.585C0 .262.275 0 .614 0zm.95 1.17v21.66h20.872V1.17H1.564z" fill="#4ade80"/>
           </svg>
           <span class="stack-name">Bash</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="sectors">
+    <div class="container">
+      <div class="section-label reveal" style="text-align:center; margin-bottom: 1.5rem;">// industry experience</div>
+      <div class="sectors-grid reveal">
+
+        <div class="sector-card">
+          <div class="sector-icon">&#128666;</div>
+          <div class="sector-name">Logistics &amp; Courier</div>
+          <div class="sector-detail">Global express delivery &amp; freight</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">&#127863;</div>
+          <div class="sector-name">FMCG &amp; Beverage</div>
+          <div class="sector-detail">High-volume consumer goods production</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">&#129531;</div>
+          <div class="sector-name">Consumer Goods</div>
+          <div class="sector-detail">Personal care &amp; household products</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">&#128230;</div>
+          <div class="sector-name">Distribution</div>
+          <div class="sector-detail">Warehousing &amp; supply chain</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">&#9881;</div>
+          <div class="sector-name">Industrial Automation</div>
+          <div class="sector-detail">24/7 mission-critical systems</div>
         </div>
 
       </div>
